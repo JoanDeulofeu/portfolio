@@ -2,11 +2,12 @@
 
 /* eslint-disable jsx-a11y/alt-text */
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 import { useState } from "react";
 
-import OldAlert from "./components/OldAlert";
-import OldButton from "./components/OldButton";
+import OldAlert from "../components/OldAlert";
+import OldButton from "../components/OldButton";
 
 interface Alert {
 	x: number;
@@ -14,6 +15,8 @@ interface Alert {
 }
 
 export default function Home() {
+	const router = useRouter();
+
 	const [alerts, setAlerts] = useState<Alert[]>([]);
 
 	const displayAlert = () => {
@@ -80,7 +83,11 @@ export default function Home() {
 						text="Stay on the ugly world"
 						cssProp="cursor-alias"
 					></OldButton>
-					<OldButton text="Go to the future" variant="primary"></OldButton>
+					<OldButton
+						onClick={() => router.push("/about")}
+						text="Go to the future"
+						variant="primary"
+					></OldButton>
 				</div>
 			</div>
 
