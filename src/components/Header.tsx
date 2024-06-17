@@ -2,16 +2,29 @@
 
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 import { cn } from "@/utils/cn";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "./NavBarMenu";
 
 const Header = ({ className }: { className?: string }) => {
 	const router = useRouter();
+	const pathname = usePathname();
 
 	const [active, setActive] = useState<string | null>(null);
+
+	// Hide the header on the "ugly" home page
+	if (pathname === "/") {
+		return null;
+	}
+
 	return (
-		<div className={cn("fixed top-10 max-w-2xl mx-auto z-50", className)}>
+		<div
+			className={cn(
+				"fixed font-second top-10 max-w-2xl mx-auto z-50",
+				className
+			)}
+		>
 			<Menu setActive={setActive}>
 				<MenuItem
 					onClick={() => router.push("/about")}

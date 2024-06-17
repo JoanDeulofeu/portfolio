@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oxanium&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jura&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -6,7 +8,7 @@
 
 :root {
 	--foreground-rgb: 0, 0, 0;
-	--background-rgb: #f2f29d;
+	--background-rgb: #09090b;
 }
 
 body {

@@ -36,7 +36,9 @@ export default function Home() {
 	};
 
 	return (
-		<main className={`font-VT323 flex min-h-screen flex-col items-center `}>
+		<main
+			className={`font-VT323 bg-[#f2f29d] flex min-h-screen flex-col items-center `}
+		>
 			{alerts.map((a, i) => (
 				<OldAlert key={i} x={a.x} y={a.y} />
 			))}

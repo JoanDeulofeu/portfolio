@@ -10,6 +10,8 @@ const config: Config = {
 		extend: {
 			fontFamily: {
 				VT323: ["VT323", "monospace"],
+				primary: ["Oxanium", "monospace"],
+				second: ["Jura", "monospace"],
 			},
 			backgroundImage: {
 				"gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
