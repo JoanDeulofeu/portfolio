@@ -8,6 +8,16 @@ const config: Config = {
 	],
 	theme: {
 		extend: {
+			borderRadius: {
+				"4xl": "2rem",
+			},
+			colors: {
+				// Dark theme
+				dt1: "#0f0f0f",
+				dt2: "#212121",
+				dt3: "#2d2d2d",
+				dt4: "#404040",
+			},
 			fontFamily: {
 				VT323: ["VT323", "monospace"],
 				primary: ["Oxanium", "monospace"],

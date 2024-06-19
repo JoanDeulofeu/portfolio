@@ -43,7 +43,11 @@ const ResumePage = () => {
 				</Paper>
 				<Paper cssProp="flex-col flex-[3_3_0%]">
 					<>
-						<p>allo 1</p>
+						<div className="flex">
+							<div className="flex">
+								<p>allo 1</p>
+							</div>
+						</div>
 						<p>allo 2</p>
 						<p>allo 3</p>
 						<p>allo 4</p>
