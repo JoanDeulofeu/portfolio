@@ -13,6 +13,7 @@ const config: Config = {
 			},
 			colors: {
 				// Dark theme
+				dt0: "#bcee66",
 				dt1: "#0f0f0f",
 				dt2: "#212121",
 				dt3: "#2d2d2d",

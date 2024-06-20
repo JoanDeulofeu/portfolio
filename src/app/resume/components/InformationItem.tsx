@@ -1,6 +1,6 @@
 import { Player } from "@lordicon/react";
-import { RefObject } from "react";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
+import BadgeContainer from "@/components/BadgeContainer";
 
 const InformationItem = ({
 	icon,
@@ -10,7 +10,7 @@ const InformationItem = ({
 }: {
 	icon: string;
 	title: string;
-	content: string;
+	content?: string;
 	size?: number;
 }) => {
 	const playerRef = useRef<Player>(null);
@@ -19,11 +19,13 @@ const InformationItem = ({
 			onMouseEnter={() => playerRef.current?.playFromBeginning()}
 			className="flex flex-row items-center font-second m-1 mt-8 gap-2"
 		>
-			<div className="flex h-fit items-center p-3 rounded-lg bg-zinc-700 ">
+			<BadgeContainer>
 				<Player ref={playerRef} icon={icon} size={size} />
-			</div>
+			</BadgeContainer>
 			<div className="flex flex-col">
-				<p>{title}</p>
+				<p className={`${!content && "font-primary text-xl font-semibold"}`}>
+					{title}
+				</p>
 				<p>{content}</p>
 			</div>
 		</div>
