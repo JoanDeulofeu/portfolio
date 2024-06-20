@@ -17,7 +17,7 @@ const InformationItem = ({
 	return (
 		<div
 			onMouseEnter={() => playerRef.current?.playFromBeginning()}
-			className="flex flex-row items-center font-second m-1 mt-8 gap-2"
+			className="flex flex-row items-center font-second mt-8 gap-2"
 		>
 			<BadgeContainer>
 				<Player ref={playerRef} icon={icon} size={size} />

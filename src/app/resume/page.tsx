@@ -45,7 +45,7 @@ const ResumePage = () => {
 				</Paper>
 				<Paper cssProp="flex-col flex-[3_3_0%]">
 					<>
-						<div className="flex flex-col">
+						<div className="flex flex-col relative">
 							<div className="flex">
 								<InformationItem
 									icon={CODE_ICON}
@@ -78,6 +78,7 @@ const ResumePage = () => {
 								(customer and in-house products). Implementation of projects in a 
 								young start-up where everything had to be done."
 								subContent="Stack: MongoDB | NodeJS | React | Express"
+								withoutTimeline
 							/>
 							<div className="flex mt-4">
 								<InformationItem icon={BOOK_ICON} title="Education" size={25} />
@@ -98,6 +99,7 @@ const ResumePage = () => {
 							<TimelineItem
 								title="Bep Chauffeur Routier"
 								subTitle="2008-2010 | High School - Alès"
+								withoutTimeline
 							/>
 						</div>
 					</>
