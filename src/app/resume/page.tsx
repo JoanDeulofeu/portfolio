@@ -1,5 +1,6 @@
 "use client";
 
+import Charts from "@/components/Charts";
 import Paper from "../../components/Paper";
 import InformationItem from "./components/InformationItem";
 import TimelineItem from "./components/TimelineItem";
@@ -101,6 +102,9 @@ const ResumePage = () => {
 								subTitle="2008-2010 | High School - Alès"
 								withoutTimeline
 							/>
+						</div>
+						<div className="flex">
+							<Charts />
 						</div>
 					</>
 				</Paper>
