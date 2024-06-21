@@ -21,9 +21,9 @@ const TimelineItem = ({
 		>
 			<div className="flex flex-col">
 				<div
-					className={`flex items-center gap-7 ml-[${
-						withoutTimeline ? "-2.3" : "-2.45"
-					}rem]`}
+					className={`flex items-center gap-7 ${
+						withoutTimeline ? "ml-[-2.3rem]" : "ml-[-2.45rem]"
+					}`}
 				>
 					<div className="bg-dt0 rounded-full w-3 h-3 z-10" />
 					<p className="font-primary font-semibold">{title}</p>
