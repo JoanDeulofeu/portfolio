@@ -10,10 +10,11 @@ const PHONE_ICON = require("../../../public/phone.json");
 const CALENDAR_ICON = require("../../../public/calendar.json");
 const CODE_ICON = require("../../../public/code.json");
 const BOOK_ICON = require("../../../public/book.json");
+const ANALYTICS_ICON = require("../../../public/analytics.json");
 
 const ResumePage = () => {
 	return (
-		<main className={`flex text-white min-h-screen flex-col`}>
+		<main className={`flex text-white min-h-screen flex-col pb-8`}>
 			<p className="font-primary text-4xl mx-8 my-6">Resume</p>
 			<div className="flex w-auto min-h-40 px-8 gap-6">
 				<Paper cssProp="flex-col flex-1">
@@ -103,7 +104,8 @@ const ResumePage = () => {
 								withoutTimeline
 							/>
 						</div>
-						<div className="flex">
+						<div className="flex flex-col">
+							<InformationItem icon={ANALYTICS_ICON} title="Skills" size={25} />
 							<Charts />
 						</div>
 					</>

@@ -8,6 +8,9 @@ const config: Config = {
 	],
 	theme: {
 		extend: {
+			boxShadow: {
+				"t-reflection": "inset 0px 1.5px 0px 0px rgba(255, 255, 255, 0.6)",
+			},
 			borderRadius: {
 				"4xl": "2rem",
 			},

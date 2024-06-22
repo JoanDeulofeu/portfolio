@@ -1,16 +1,44 @@
+import Image from "next/image";
+import test from "../../public/skills-logo/aws.svg";
+import { color } from "framer-motion";
+
 const Charts = () => {
 	const rowsLabels = ["Jedi", "Droid", "Wookie", "Jar Jar Binks"];
 	const skills = [
-		{ height: 18, label: "React" },
-		{ height: 16, label: "Node" },
-		{ height: 10, label: "TypeScript" },
-		{ height: 14, label: "GraphQL" },
-		{ height: 6, label: "Redux" },
+		{
+			height: 18,
+			type: "Controlled",
+			logos: ["react", "node-js", "typescript", "git", "mongodb"],
+			color: "bg-gradient-to-b from-red-400 to-red-500",
+		},
+		{
+			height: 16,
+			type: "Common",
+			logos: ["nestjs", "nextjs", "express", "jest"],
+			color: "bg-gradient-to-b from-blue-400 to-blue-500",
+		},
+		{
+			height: 19,
+			type: "Joke",
+			color: "bg-gradient-to-b from-green-400 to-green-500",
+		},
+		{
+			height: 13,
+			type: "Unusual",
+			logos: ["redux", "graphql", "gcp"],
+			color: "bg-gradient-to-b from-yellow-400 to-yellow-500",
+		},
+		{
+			height: 8,
+			type: "Seen",
+			logos: ["aws", "c-plain"],
+			color: "bg-gradient-to-b from-purple-400 to-purple-500",
+		},
 	];
 
 	return (
 		<div className="flex flex-col w-full relative">
-			<div className="flex w-full h-[22.5rem] bg-dt3 p-4 gap-2">
+			<div className="flex w-full h-[22.5rem] p-4 gap-2">
 				<div className="w-24">
 					{rowsLabels.map((label) => {
 						return (
@@ -36,15 +64,36 @@ const Charts = () => {
 					</div>
 				</div>
 			</div>
-			<div className="flex w-full h-[22.5rem] absolute top-0 p-4 pl-32 pr-8 items-end justify-between">
-				{skills.map(({ height, label }) => {
+			<div className="flex w-full h-[22.5rem] absolute top-0 p-4 pl-32 pr-8 items-end justify-between ">
+				{skills.map(({ height, type, logos, color }) => {
 					return (
 						<div
-							key={label}
-							className="flex w-20 bg-red-400"
+							key={type}
+							className={`flex flex-col w-20 ${color} justify-end items-center gap-4 rounded-t-xl shadow-t-reflection`}
 							style={{ height: `${height}rem` }}
 						>
-							{label}
+							<>
+								{logos && logos?.length > 0 ? (
+									logos?.map((logo) => {
+										return (
+											<Image
+												key={logo}
+												src={`/skills-logo/${logo}.svg`}
+												alt={logo}
+												width={24}
+												height={24}
+											/>
+										);
+									})
+								) : (
+									<p className="font-primary text-md text-center">
+										Drinking Juice 🥤
+									</p>
+								)}
+								<p className="font-primary text-3xl">{`${
+									(height * 100) / 20
+								} %`}</p>
+							</>
 						</div>
 					);
 				})}
