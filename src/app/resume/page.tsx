@@ -1,17 +1,18 @@
 "use client";
 
+import IconCloud from "@/app/resume/components/IconCloud";
 import Charts from "@/components/Charts";
 import Paper from "../../components/Paper";
 import InformationItem from "./components/InformationItem";
 import TimelineItem from "./components/TimelineItem";
-import IconCloud from "@/app/resume/components/IconCloud";
 
-const EMAIL_ICON = require("../../../public/email.json");
-const PHONE_ICON = require("../../../public/phone.json");
+const ANALYTICS_ICON = require("../../../public/analytics.json");
+const BOOK_ICON = require("../../../public/book.json");
 const CALENDAR_ICON = require("../../../public/calendar.json");
 const CODE_ICON = require("../../../public/code.json");
-const BOOK_ICON = require("../../../public/book.json");
-const ANALYTICS_ICON = require("../../../public/analytics.json");
+const EMAIL_ICON = require("../../../public/email.json");
+const HOME_ICON = require("../../../public/home.json");
+const PHONE_ICON = require("../../../public/phone.json");
 
 const ResumePage = () => {
 	return (
@@ -42,6 +43,12 @@ const ResumePage = () => {
 							icon={CALENDAR_ICON}
 							title="BIRTHDAY"
 							content="12 January 1993"
+							size={25}
+						/>
+						<InformationItem
+							icon={HOME_ICON}
+							title="LOCATION"
+							content="Montpellier, France"
 							size={25}
 						/>
 					</>
