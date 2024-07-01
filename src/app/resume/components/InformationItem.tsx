@@ -1,5 +1,5 @@
 import { Player } from "@lordicon/react";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import BadgeContainer from "@/components/BadgeContainer";
 
 const InformationItem = ({
@@ -14,9 +14,13 @@ const InformationItem = ({
 	size?: number;
 }) => {
 	const playerRef = useRef<Player>(null);
+
 	return (
 		<div
-			onMouseEnter={() => playerRef.current?.playFromBeginning()}
+			onMouseEnter={() => {
+				if (!playerRef.current?.isPlaying)
+					playerRef.current?.playFromBeginning();
+			}}
 			className="flex flex-row items-center font-second mt-8 gap-2"
 		>
 			<BadgeContainer>
