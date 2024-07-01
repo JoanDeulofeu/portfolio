@@ -11,7 +11,7 @@
   "dependencies": {
     "@lordicon/react": "^1.6.0",
     "clsx": "^2.1.1",
-    "framer-motion": "^11.2.10",
+    "framer-motion": "^11.2.11",
     "lottie-web": "^5.12.2",
     "next": "14.2.4",
     "react": "^18",

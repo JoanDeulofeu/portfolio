@@ -75,7 +75,7 @@ const ResumePage = () => {
 							/>
 							<TimelineItem
 								title="Ubees Inc"
-								subTitle="2020-2021 | Full Remote"
+								subTitle="2020-2021 | Hybrid Remote"
 								content="Development of 3 mobile applications and several websites 
 								(customer and in-house products). Implementation of projects in a 
 								young start-up where everything had to be done."
@@ -105,6 +105,7 @@ const ResumePage = () => {
 							/>
 						</div>
 						<div className="flex flex-col">
+							<div className="flex "></div>
 							<InformationItem icon={ANALYTICS_ICON} title="Skills" size={25} />
 							<Charts />
 						</div>

@@ -1,6 +1,5 @@
 import Image from "next/image";
-import test from "../../public/skills-logo/aws.svg";
-import { color } from "framer-motion";
+import { Tooltip } from "./Tooltip";
 
 const Charts = () => {
 	const rowsLabels = ["Jedi", "Droid", "Wookie", "Jar Jar Binks"];
@@ -8,7 +7,7 @@ const Charts = () => {
 		{
 			height: 18,
 			type: "Controlled",
-			logos: ["react", "node-js", "typescript", "git", "mongodb"],
+			logos: ["react", "nodejs", "typescript", "git", "mongodb"],
 			color: "bg-gradient-to-b from-red-400 to-red-500",
 		},
 		{
@@ -31,7 +30,7 @@ const Charts = () => {
 		{
 			height: 8,
 			type: "Seen",
-			logos: ["aws", "c-plain"],
+			logos: ["aws", "c"],
 			color: "bg-gradient-to-b from-purple-400 to-purple-500",
 		},
 	];
@@ -76,17 +75,19 @@ const Charts = () => {
 								{logos && logos?.length > 0 ? (
 									logos?.map((logo) => {
 										return (
-											<Image
-												key={logo}
-												src={`/skills-logo/${logo}.svg`}
-												alt={logo}
-												width={24}
-												height={24}
-											/>
+											<Tooltip title={logo} key={logo}>
+												<Image
+													src={`/skills-logo/${logo}.svg`}
+													alt={logo}
+													width={0}
+													height={0}
+													className="w-6 h-auto"
+												/>
+											</Tooltip>
 										);
 									})
 								) : (
-									<p className="font-primary text-md text-center">
+									<p className="font-primary mb-20 text-md text-center">
 										Drinking Juice 🥤
 									</p>
 								)}
