@@ -5,14 +5,15 @@ import Charts from "@/components/Charts";
 import Paper from "../../components/Paper";
 import InformationItem from "./components/InformationItem";
 import TimelineItem from "./components/TimelineItem";
+import SocialNetworks from "@/components/SocialNetworks";
 
-const ANALYTICS_ICON = require("../../../public/analytics.json");
-const BOOK_ICON = require("../../../public/book.json");
-const CALENDAR_ICON = require("../../../public/calendar.json");
-const CODE_ICON = require("../../../public/code.json");
-const EMAIL_ICON = require("../../../public/email.json");
-const HOME_ICON = require("../../../public/home.json");
-const PHONE_ICON = require("../../../public/phone.json");
+const ANALYTICS_ICON = require("../../../public/icons/analytics.json");
+const BOOK_ICON = require("../../../public/icons/book.json");
+const CALENDAR_ICON = require("../../../public/icons/calendar.json");
+const CODE_ICON = require("../../../public/icons/code.json");
+const EMAIL_ICON = require("../../../public/icons/email.json");
+const HOME_ICON = require("../../../public/icons/home.json");
+const PHONE_ICON = require("../../../public/icons/phone.json");
 
 const ResumePage = () => {
 	return (
@@ -42,7 +43,7 @@ const ResumePage = () => {
 						<InformationItem
 							icon={CALENDAR_ICON}
 							title="BIRTHDAY"
-							content="12 January 1993"
+							content="January 1993"
 							size={25}
 						/>
 						<InformationItem
@@ -51,6 +52,7 @@ const ResumePage = () => {
 							content="Montpellier, France"
 							size={25}
 						/>
+						<SocialNetworks />
 					</>
 				</Paper>
 				<Paper cssProp="flex-col flex-[3_3_0%]">
