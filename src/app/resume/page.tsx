@@ -6,6 +6,7 @@ import Paper from "../../components/Paper";
 import InformationItem from "./components/InformationItem";
 import TimelineItem from "./components/TimelineItem";
 import SocialNetworks from "@/components/SocialNetworks";
+import Image from "next/image";
 
 const ANALYTICS_ICON = require("../../../public/icons/analytics.json");
 const BOOK_ICON = require("../../../public/icons/book.json");
@@ -22,7 +23,18 @@ const ResumePage = () => {
 			<div className="flex w-auto min-h-40 px-8 gap-6">
 				<Paper cssProp="flex-col flex-1 h-fit sticky top-4">
 					<>
-						<Paper light cssProp="flex-col w-44 h-44 mx-auto mt-8"></Paper>
+						<Paper
+							light
+							cssProp="flex w-44 h-44 mx-auto mt-8 justify-center items-center p-0"
+						>
+							<Image
+								src="/memoji.png"
+								alt="Joan Gehin"
+								width={300}
+								height={300}
+								className="mt-2"
+							></Image>
+						</Paper>
 						<Paper light cssProp="flex-col mx-auto mt-8 px-2 py-2">
 							<p className="font-second">Web Developper FullStack</p>
 						</Paper>
