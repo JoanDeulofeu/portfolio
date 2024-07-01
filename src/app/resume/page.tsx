@@ -4,6 +4,7 @@ import Charts from "@/components/Charts";
 import Paper from "../../components/Paper";
 import InformationItem from "./components/InformationItem";
 import TimelineItem from "./components/TimelineItem";
+import IconCloud from "@/app/resume/components/IconCloud";
 
 const EMAIL_ICON = require("../../../public/email.json");
 const PHONE_ICON = require("../../../public/phone.json");
@@ -108,6 +109,7 @@ const ResumePage = () => {
 							<div className="flex "></div>
 							<InformationItem icon={ANALYTICS_ICON} title="Skills" size={25} />
 							<Charts />
+							<IconCloud />
 						</div>
 					</>
 				</Paper>

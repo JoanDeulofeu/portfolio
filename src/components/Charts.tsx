@@ -36,7 +36,7 @@ const Charts = () => {
 	];
 
 	return (
-		<div className="flex flex-col w-full relative">
+		<div className="flex flex-col w-full relative max-lg:hidden">
 			<div className="flex w-full h-[22.5rem] p-4 gap-2">
 				<div className="w-24">
 					{rowsLabels.map((label) => {
