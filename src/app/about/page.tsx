@@ -17,7 +17,7 @@ export default function HomePage() {
 					// 	<Badge className="h-10 w-10 transform -rotate-12" />
 					// </Link>
 					// }
-					src={`/macbook.png`}
+					src={`/macbook2.png`}
 					showGradient={false}
 				/>
 			</div>
